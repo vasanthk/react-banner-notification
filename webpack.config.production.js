@@ -43,7 +43,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './scripts/index',
+  entry: './scripts/NotificationItem',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -65,6 +65,16 @@ module.exports = {
         warnings: false
       }
     })
+  ],
+  externals: [
+    {
+      "react": {
+        root: "React",
+        commonjs2: "react",
+        commonjs: "react",
+        amd: "react"
+      }
+    }
   ],
   module: {
     loaders: [
