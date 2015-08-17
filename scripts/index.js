@@ -1,1 +1,3 @@
-module.exports = require('./Notifications.js');
+module.exports = {
+  Notifications: require('./Notifications.js')
+};
