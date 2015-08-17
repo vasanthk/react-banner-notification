@@ -62,3 +62,11 @@ export default class NotificationItem extends Component {
     );
   }
 }
+
+NotificationItem.propTypes = {
+  hideNotification: React.PropTypes.func,
+  id: React.PropTypes.number.isRequired,
+  type: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string.isRequired,
+  msg: React.PropTypes.string
+};

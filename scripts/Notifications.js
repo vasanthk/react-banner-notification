@@ -1,5 +1,5 @@
 import React, {Component} from 'react/addons';
-import NotificationItem from './NotificationItem'
+import NotificationItem from './NotificationItem';
 
 export default class Notifications extends Component {
   constructor(props) {
@@ -49,8 +49,8 @@ export default class Notifications extends Component {
   countdownToHide(duration, key) {
     const that = this;
     setTimeout(function () {
-      that.hideNotification(key)
-    }, duration)
+      that.hideNotification(key);
+    }, duration);
   }
 
   hideNotification(key) {
@@ -60,9 +60,9 @@ export default class Notifications extends Component {
     // TODO: Check how to handle this with React immutability helpers and avoid 'delete' + Setstate
     // Uses react addons' immutability helpers - to remove element from array in component state
     // http://stackoverflow.com/a/29533459/1672655
-    //this.setState({
-    //  notifications: React.addons.update(this.state.notifications, {$splice: [[key, 1]]})
-    //});
+    //  this.setState({
+    //    notifications: React.addons.update(this.state.notifications, {$splice: [[key, 1]]})
+    //  });
   }
 
   render() {
