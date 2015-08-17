@@ -1,8 +1,8 @@
 {
   "name": "react-banner-notification",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Banner message/notification component for React",
-  "main": "NotificationItem.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "start": "node server.js",
     "build": "webpack --config webpack.config.production.js",
