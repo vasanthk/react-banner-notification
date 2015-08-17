@@ -18,8 +18,9 @@ export default class Demo extends React.Component {
   render() {
     return (
       <div>
+        <h3>Notifications Demo</h3>
         <button onClick={this.showNotification}>
-          Show
+          Show Demo Notifications
         </button>
         <Notifications ref='notificator'/>
       </div>

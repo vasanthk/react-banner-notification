@@ -43,7 +43,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './scripts/index',
+  entry: './scripts/NotificationItem',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -72,8 +72,7 @@ module.exports = {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: [
-          path.join(__dirname, 'scripts'),
-          path.join(__dirname, 'demo')
+          path.join(__dirname, 'scripts')
         ]
       }
     ]
