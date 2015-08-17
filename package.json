@@ -1,7 +1,7 @@
 {
   "name": "react-banner-notification",
   "version": "1.0.0",
-  "description": "Banner message/notification component using React",
+  "description": "Banner message/notification component for React",
   "main": "NotificationItem.js",
   "scripts": {
     "start": "node server.js",
