@@ -8,19 +8,19 @@ var Notifications = React.createClass({
     };
   },
 
-  success: function(title, msg, duration) {
+  success: function (title, msg, duration) {
     this.addNotification(title, msg, duration, 'success');
   },
 
-  error: function(title, msg, duration) {
+  error: function (title, msg, duration) {
     this.addNotification(title, msg, duration, 'error');
   },
 
-  info: function(title, msg, duration) {
+  info: function (title, msg, duration) {
     this.addNotification(title, msg, duration, 'info');
   },
 
-  addNotification: function(title, msg, duration, type) {
+  addNotification: function (title, msg, duration, type) {
     var notifications = this.state.notifications;
     var newKey = notifications.length;
 
@@ -38,14 +38,14 @@ var Notifications = React.createClass({
     this.countdownToHide(duration, newKey);
   },
 
-  countdownToHide: function(duration, key) {
+  countdownToHide: function (duration, key) {
     var that = this;
     setTimeout(function () {
       that.hideNotification(key);
     }, duration);
   },
 
-  hideNotification: function(key) {
+  hideNotification: function (key) {
     delete this.state.notifications[key];
     this.setState(this.state);
 
@@ -57,7 +57,7 @@ var Notifications = React.createClass({
     //  });
   },
 
-  render: function() {
+  render: function () {
     var notificationElems;
     var styles = {
       container: {
@@ -69,7 +69,7 @@ var Notifications = React.createClass({
     };
 
     if (this.state.notifications.length) {
-      notificationElems = this.state.notifications.map((notification, index) => {
+      notificationElems = this.state.notifications.map(function (notification, index) {
         return (
           <NotificationItem id={index}
                             key={'notification-' + index}
