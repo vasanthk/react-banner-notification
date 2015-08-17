@@ -1,36 +1,28 @@
-import React, {Component} from 'react/addons';
-import NotificationItem from './NotificationItem';
+var React = require('react');
+var NotificationItem = require('./NotificationItem');
 
-export default class Notifications extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+var Notifications = React.createClass({
+  getInitialState() {
+    return {
       notifications: []
     };
-
-    this.success = this.success.bind(this);
-    this.error = this.error.bind(this);
-    this.info = this.info.bind(this);
-    this.addNotification = this.addNotification.bind(this);
-    this.countdownToHide = this.countdownToHide.bind(this);
-    this.hideNotification = this.hideNotification.bind(this);
-  }
+  },
 
   success(title, msg, duration) {
     this.addNotification(title, msg, duration, 'success');
-  }
+  },
 
   error(title, msg, duration) {
     this.addNotification(title, msg, duration, 'error');
-  }
+  },
 
   info(title, msg, duration) {
     this.addNotification(title, msg, duration, 'info');
-  }
+  },
 
   addNotification(title, msg, duration, type) {
-    const notifications = this.state.notifications;
-    const newKey = notifications.length;
+    var notifications = this.state.notifications;
+    var newKey = notifications.length;
 
     notifications.push({
       title: title,
@@ -44,14 +36,14 @@ export default class Notifications extends Component {
     });
 
     this.countdownToHide(duration, newKey);
-  }
+  },
 
   countdownToHide(duration, key) {
-    const that = this;
+    var that = this;
     setTimeout(function () {
       that.hideNotification(key);
     }, duration);
-  }
+  },
 
   hideNotification(key) {
     delete this.state.notifications[key];
@@ -63,11 +55,11 @@ export default class Notifications extends Component {
     //  this.setState({
     //    notifications: React.addons.update(this.state.notifications, {$splice: [[key, 1]]})
     //  });
-  }
+  },
 
   render() {
-    let notificationElems;
-    const styles = {
+    var notificationElems;
+    var styles = {
       container: {
         display: 'block',
         position: 'absolute',
@@ -98,4 +90,7 @@ export default class Notifications extends Component {
       </div>
     );
   }
-}
+
+});
+
+module.exports = Notifications;
