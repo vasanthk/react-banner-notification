@@ -1,5 +1,5 @@
 import React from 'react';
-import Notifications from './Notifications';
+import Notifications from './../scripts/Notifications';
 
 export default class Demo extends React.Component {
 
