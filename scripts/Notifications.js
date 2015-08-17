@@ -69,12 +69,7 @@ export default class Notifications extends Component {
     let notificationElems;
     const styles = {
       container: {
-        display: 'flex',
-        flexDirection: 'column',
-        flexWrap: 'wrap',
-        justifyContent: 'flex-end',
-        alignItems: 'flex-start',
-        alignContent: 'flex-start',
+        display: 'block',
         position: 'absolute',
         top: 0,
         right: 0

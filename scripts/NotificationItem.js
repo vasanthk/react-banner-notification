@@ -14,36 +14,29 @@ export default class NotificationItem extends Component {
   render() {
     const hexColors = {
       // keys based on this.props.type
-      success: {
-        color: '#51a351',
-        opacity: 0.4
-      },
-      error: {
-        color: '#cb645e',
-        opacity: 0.8
-      },
-      info: {
-        color: '#2196f3',
-        opacity: 0.8
-      }
+      success: '#4CAF50',
+      error: '#D32F2F',
+      info: '#1976D2'
     };
 
     const styles = {
       notificationItem: {
-        width: 250,
+        width: 200,
         marginTop: 5,
         marginRight: 10,
+        paddingBottom: 1,
         borderRadius: 5,
         color: '#fff',
-        backgroundColor: hexColors[this.props.type].color,
-        opacity: hexColors[this.props.type].opacity
+        backgroundColor: hexColors[this.props.type],
+        opacity: 0.8
       },
       notificationBody: {
         margin: 10,
         opacity: 0.8
       },
       notificationTitle: {
-        fontWeight: 70,
+        fontWeight: 600,
+        paddingTop: 5,
         margin: 10,
         opacity: 0.8
       }

@@ -10,9 +10,9 @@ export default class Demo extends React.Component {
   }
 
   showNotification() {
-    //this.refs.notificator.error("Title.", "Msg - body.", 3000);
-    //this.refs.notificator.info("Title.", "Msg - body.", 5000);
-    this.refs.notificator.success('Title', 'Message body here', 3000);
+    this.refs.notificator.error('Error Notification', 'Optional Error Message', 1000);
+    this.refs.notificator.info('Info Notification', 'Optional Info Message', 5000);
+    this.refs.notificator.success('Success Notification', 'Optional Success Message', 3000);
   }
 
   render() {
