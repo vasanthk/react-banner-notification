@@ -2,25 +2,25 @@ var React = require('react');
 var NotificationItem = require('./NotificationItem');
 
 var Notifications = React.createClass({
-  getInitialState() {
+  getInitialState: function () {
     return {
       notifications: []
     };
   },
 
-  success(title, msg, duration) {
+  success: function(title, msg, duration) {
     this.addNotification(title, msg, duration, 'success');
   },
 
-  error(title, msg, duration) {
+  error: function(title, msg, duration) {
     this.addNotification(title, msg, duration, 'error');
   },
 
-  info(title, msg, duration) {
+  info: function(title, msg, duration) {
     this.addNotification(title, msg, duration, 'info');
   },
 
-  addNotification(title, msg, duration, type) {
+  addNotification: function(title, msg, duration, type) {
     var notifications = this.state.notifications;
     var newKey = notifications.length;
 
@@ -38,14 +38,14 @@ var Notifications = React.createClass({
     this.countdownToHide(duration, newKey);
   },
 
-  countdownToHide(duration, key) {
+  countdownToHide: function(duration, key) {
     var that = this;
     setTimeout(function () {
       that.hideNotification(key);
     }, duration);
   },
 
-  hideNotification(key) {
+  hideNotification: function(key) {
     delete this.state.notifications[key];
     this.setState(this.state);
 
@@ -57,7 +57,7 @@ var Notifications = React.createClass({
     //  });
   },
 
-  render() {
+  render: function() {
     var notificationElems;
     var styles = {
       container: {

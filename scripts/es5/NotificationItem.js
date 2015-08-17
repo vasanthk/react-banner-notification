@@ -10,11 +10,11 @@ var NotificationItem = React.createClass({
     msg: React.PropTypes.string
   },
 
-  hideNotification() {
+  hideNotification: function() {
     this.props.hideNotification(this.props.id);
   },
 
-  render() {
+  render: function() {
     var hexColors = {
       // keys based on this.props.type
       success: '#4CAF50',
