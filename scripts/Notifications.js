@@ -48,7 +48,7 @@ export default class Notifications extends Component {
 
   countdownToHide(duration, key) {
     const that = this;
-    setTimeout(function() {
+    setTimeout(function () {
       that.hideNotification(key)
     }, duration)
   }
@@ -67,8 +67,21 @@ export default class Notifications extends Component {
 
   render() {
     let notificationElems;
+    const styles = {
+      container: {
+        display: 'flex',
+        flexDirection: 'column',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-start',
+        alignContent: 'flex-start',
+        position: 'absolute',
+        top: 0,
+        right: 0
+      }
+    };
 
-    if(this.state.notifications.length) {
+    if (this.state.notifications.length) {
       notificationElems = this.state.notifications.map((notification, index) => {
         return (
           <NotificationItem id={index}
@@ -83,7 +96,9 @@ export default class Notifications extends Component {
     }
 
     return (
-      <div className='notification-container'>
+      <div className='notification-container'
+           style={styles.container}
+        >
         {notificationElems}
       </div>
     );
