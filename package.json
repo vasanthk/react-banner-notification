@@ -1,6 +1,6 @@
 {
   "name": "react-banner-notification",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Banner message/notification component for React",
   "main": "dist/bundle.js",
   "scripts": {
@@ -27,7 +27,7 @@
     "url": "https://github.com/vasanthk/react-banner-notification/issues"
   },
   "homepage": "https://github.com/vasanthk/react-banner-notification",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^0.13.0",
     "babel-runtime": "^5.0.0"
   },
