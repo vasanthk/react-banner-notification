@@ -93,4 +93,7 @@ var Notifications = React.createClass({
 
 });
 
-module.exports = Notifications;
+module.exports = {
+  React: React,
+  Notifications: Notifications
+};

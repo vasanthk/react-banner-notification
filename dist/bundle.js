@@ -141,7 +141,10 @@
 	
 	});
 	
-	module.exports = Notifications;
+	module.exports = {
+	  React: React,
+	  Notifications: Notifications
+	};
 
 /***/ },
 /* 1 */
