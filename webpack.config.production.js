@@ -43,7 +43,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './scripts/es5/NotificationItem',
+  entry: './scripts/es5/Notifications',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -58,11 +58,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
       }
     })
   ],

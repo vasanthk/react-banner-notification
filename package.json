@@ -1,6 +1,6 @@
 {
   "name": "react-banner-notification",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Banner message/notification component for React",
   "main": "dist/bundle.js",
   "scripts": {
