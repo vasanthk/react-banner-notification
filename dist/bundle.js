@@ -117,6 +117,7 @@
 	        right: 0
 	      }
 	    };
+	    var hideNotification = this.hideNotification;
 	
 	    if (this.state.notifications.length) {
 	      notificationElems = this.state.notifications.map(function (notification, index) {
@@ -125,7 +126,7 @@
 	          title: notification.title,
 	          msg: notification.msg,
 	          type: notification.type,
-	          hideNotification: this.hideNotification
+	          hideNotification: hideNotification
 	        });
 	      });
 	    }
@@ -141,10 +142,7 @@
 	
 	});
 	
-	module.exports = {
-	  React: React,
-	  Notifications: Notifications
-	};
+	module.exports = Notifications;
 
 /***/ },
 /* 1 */

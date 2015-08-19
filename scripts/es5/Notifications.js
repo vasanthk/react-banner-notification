@@ -67,6 +67,7 @@ var Notifications = React.createClass({
         right: 0
       }
     };
+    var hideNotification = this.hideNotification;
 
     if (this.state.notifications.length) {
       notificationElems = this.state.notifications.map(function (notification, index) {
@@ -76,7 +77,7 @@ var Notifications = React.createClass({
                             title={notification.title}
                             msg={notification.msg}
                             type={notification.type}
-                            hideNotification={this.hideNotification}
+                            hideNotification={hideNotification}
             />
         );
       });
@@ -93,7 +94,4 @@ var Notifications = React.createClass({
 
 });
 
-module.exports = {
-  React: React,
-  Notifications: Notifications
-};
+module.exports = Notifications;
