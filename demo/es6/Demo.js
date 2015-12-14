@@ -6,13 +6,26 @@ export default class Demo extends React.Component {
   constructor(props) {
     super(props);
 
+    this.duration = this.duration.bind(this);
     this.showNotification = this.showNotification.bind(this);
+    this.notification = this.notification.bind(this);
+  }
+
+  duration() {
+    return Math.round(Math.random() * 9) * 1000;
   }
 
   showNotification() {
-    this.refs.notificator.error('Error Notification', 'Optional Error Message', 1000);
-    this.refs.notificator.info('Info Notification', 'Optional Info Message', 5000);
-    this.refs.notificator.success('Success Notification', 'Optional Success Message', 3000);
+    var r = Math.round(Math.random() * 2);
+    var arr = ['success', 'info', 'error'];
+
+    this.notification(arr[r]);
+  }
+
+  notification(notify) {
+    var duration = this.duration();
+    var body = "Message - " + notify + ', Duration: ' + duration;
+    this.refs.notificator[notify]("Title - " + notify, body, duration);
   }
 
   render() {
