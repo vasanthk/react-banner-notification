@@ -1,5 +1,7 @@
 # React Banner Notification
-Banner message/notification component
+Banner message/notification component.
+
+Both ES5 and ES6 version available in the repo. 
 
 ![Notifications Demo](https://cdn.rawgit.com/vasanthk/react-banner-notification/master/demo/demo.gif)
 
