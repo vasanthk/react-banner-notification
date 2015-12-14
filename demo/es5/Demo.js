@@ -2,13 +2,24 @@ var React = require('react');
 var Notifications = require('./../../scripts/es5/Notifications');
 
 var Demo = React.createClass({
-  showNotification: function() {
-    this.refs.notificator.error('Error Notification', 'Optional Error Message', 1000);
-    this.refs.notificator.info('Info Notification', 'Optional Info Message', 5000);
-    this.refs.notificator.success('Success Notification', 'Optional Success Message', 3000);
+  duration: function () {
+    return Math.round(Math.random() * 9) * 1000;
   },
 
-  render: function() {
+  showNotification: function () {
+    var r = Math.round(Math.random() * 2);
+    var arr = ['success', 'info', 'error'];
+
+    this.notification(arr[r]);
+  },
+
+  notification: function (notify) {
+    var duration = this.duration();
+    var body = "Message - " + notify + ', Duration: ' + duration;
+    this.refs.notificator[notify]("Title - " + notify, body, duration);
+  },
+
+  render: function () {
     return (
       <div>
         <h3>Notifications Demo</h3>
