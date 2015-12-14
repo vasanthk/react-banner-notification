@@ -3,5 +3,5 @@ var Demo = require('./Demo');
 
 React.render(
   <Demo />,
-  document.querySelector('body')
+  document.body
 );
