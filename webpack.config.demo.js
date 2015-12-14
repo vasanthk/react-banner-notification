@@ -43,7 +43,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: './demo/es5/index.js',
+  entry: './demo/es6/index.js',
   output: {
     path: path.join(__dirname, 'demo/dist'),
     filename: 'bundle.js',
