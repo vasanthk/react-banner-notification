@@ -1,5 +1,5 @@
-import React from 'react';
-import Demo from './Demo';
+var React = require('react');
+var Demo = require('./Demo');
 
 React.render(
   <Demo />,
