@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack --config webpack.config.production.js",
+    "build-demo": "webpack --config webpack.config.demo.js",
     "lint": "eslint ."
   },
   "repository": {
