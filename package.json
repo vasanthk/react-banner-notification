@@ -1,13 +1,14 @@
 {
   "name": "react-banner-notification",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Banner message/notification component for React",
-  "main": "dist/bundle.js",
+  "main": "dist/Notifications.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --config webpack.config.production.js",
+    "build": "babel scripts/es6 --out-dir dist",
     "build-demo": "webpack --config webpack.config.demo.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,9 @@
     "url": "https://github.com/vasanthk/react-banner-notification/issues"
   },
   "homepage": "https://github.com/vasanthk/react-banner-notification",
-  "dependencies": {
-    "react": "^0.13.0",
-    "babel-runtime": "^5.0.0"
-  },
   "devDependencies": {
+    "react": "^0.13.0",
+    "babel-runtime": "^5.0.0",
     "babel-core": "^5.4.5",
     "babel-eslint": "^3.1.6",
     "babel-loader": "^5.0.0",
